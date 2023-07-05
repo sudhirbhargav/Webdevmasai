@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" id="stuname" placeholder="Enter your Name">
+        <input type="text" id="stunum" placeholder="Enter your Number">
+        <input type="text" id="stucity" placeholder="Enter your City">
+        <button onclick="pushed1()">Submit</button>
+        <h3 id="data"></h3>
+</body>
+</html>
+<script>
+
+    // in lecture code 
+
+    // function two (){
+    //    let obj1 = {
+    //         name:"shoe",
+    //         price:"40$",
+    //         type:"wearables"
+    //     }
+    //     return obj1
+    // }
+    // let pro = two()
+    // console.log(pro)
+
+
+    // function three (){
+    //     this.name = "sneakers",
+    //     this.price = "50$"
+    // }
+    // let constructorfung = new three()
+    // console.log(constructorfung)
+
+    // function four (n,p){
+    //     this.name = n,
+    //     this.price = p
+    // }
+    // let constros1 = new four("snekers",5000)
+    // console.log(constros1)
+
+    // assingment
+
+        let studentinfoarray = []
+        function constroctor1 (){
+            let studentname = document.getElementById("stuname").value;
+            let studentnumber = document.getElementById("stunum").value;
+            let studentcity = document.getElementById("stucity").value;
+            this.name = studentname;
+            this.number = studentnumber;
+            this.city = studentcity;
+        }
+        function pushed1 (){
+            let students = new constroctor1();
+            studentinfoarray = []
+            studentinfoarray.push(students);
+            let div = document.getElementById("data")
+            div.innerText = studentinfoarray[0].name + " " +studentinfoarray[0].number+ " "+studentinfoarray[0].city
+            console.log(studentinfoarray);
+        }
+</script> 
